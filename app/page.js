@@ -1,18 +1,20 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+import Link from 'next/link';
 
-export default function BoxBasic() {
+export default function Home() {
   return (
-    <main>
-      <Box component="section" className="border border-gray-800 m-5 text-center">
-        <h1 className="text-3xl text-violet-950">Stock Management v1.0</h1>
-        <ul>
-          <li><a href="/product">Products</a></li>
-          <li><a href="/category">Category</a></li>
-        </ul>
-        
-      </Box>
-    </main>
+    <div className="min-h-screen p-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-8">Customer Management System</h1>
+        <div className="space-y-4">
+          <Link 
+            href="/customer" 
+            className="block p-6 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+          >
+            <h2 className="text-2xl font-semibold">View All Customers</h2>
+            <p className="mt-2">Manage your customer database</p>
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
